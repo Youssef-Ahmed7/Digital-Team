@@ -54,6 +54,13 @@ window.addEventListener("scroll" , function(){
             })
             navLinks[1].classList.add("active");
     }  
+    else{
+        navLinks.forEach(function(link){  
+            link.classList.remove("active");
+    })
+    navLinks[0].classList.add("active");
+    }
+
 })
 // starting about filter of about section
 let aboutLis = document.querySelectorAll(".about .container >article ul li");
