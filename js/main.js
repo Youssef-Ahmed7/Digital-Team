@@ -37,9 +37,8 @@ window.addEventListener("scroll" , function(){
 window.addEventListener("scroll" , function(){
 
     let work = document.getElementById("work");
-    let workHeight = work.offsetHeight;
     let workTOp = work.offsetTop;
-    if (window.pageYOffset > (workHeight + workTOp - window.innerHeight-325)){
+    if (window.pageYOffset >  workTOp -200){
         let articles =document.querySelectorAll("section.work .container article");
         articles.forEach(function(e){
             e.style.opacity = "1";
@@ -79,9 +78,9 @@ aboutLis.forEach(function(e){
     })
 })
 window.addEventListener("scroll" , function(){
-    let aboutHeight = document.querySelector(".about").offsetHeight;
+    
     let aboutTop = document.querySelector(".about").offsetTop;
-    if (window.scrollY > (aboutHeight + aboutTop - window.innerHeight -325)){
+    if (window.scrollY >  aboutTop-200){
         document.querySelector(".about .container figure").style.cssText = "opacity:1; transform:translateX(0px);";
         document.querySelector(".about .container >article").style.cssText = "opacity:1; transform:translateX(0px);";
         document.querySelector(".about .special-heading").style.cssText = "opacity:1;transform:translate(-50% , 0px);";
@@ -93,9 +92,8 @@ window.addEventListener("scroll" , function(){
 })
 // starting team section
 window.addEventListener("scroll", function(){
-    let teamHeight =document.querySelector(".team").offsetHeight;
     let teamTop =document.querySelector(".team").offsetTop;
-    if (window.scrollY  > (teamHeight + teamTop - window.innerHeight-325)){
+    if (window.scrollY  >teamTop-200){
         navLinks.forEach(function(link){  
             link.classList.remove("active");
     })
@@ -110,9 +108,9 @@ window.addEventListener("scroll", function(){
 // starting portfolio section
 window.addEventListener("scroll" , function(){
     let port = document.querySelector(".portfolio");
-    let portHeight = port.offsetHeight;
+   
     let portTop = port.offsetTop;
-    if (window.scrollY > (portHeight + portTop - window.innerHeight-325)){
+    if (window.scrollY > portTop-200){
         document.querySelector(".portfolio .special-heading").style.cssText = "opacity:1; transform: translate(-50% , 0px);";
         document.querySelector(".portfolio .content").style.cssText = "opacity:1;";
         navLinks.forEach(function(link){  
@@ -225,9 +223,9 @@ for (let i = 0 ;i<6 ;i++){
 }
 // starting price section
 window.addEventListener("scroll" , function(){
-    let priceHeight = document.querySelector(".price").offsetHeight;
+   
     let priceTop = document.querySelector(".price").offsetTop;
-    if (window.scrollY > (priceHeight + priceTop - window.innerHeight-325)){
+    if (window.scrollY > priceTop-200){
         document.querySelectorAll(".price .container .content article").forEach(function(art){
             art.style.transform = "scale(1)";
             document.querySelector(".price .special-heading").style.cssText = "opacity:1; transform:translate(-50% , 0px);"
